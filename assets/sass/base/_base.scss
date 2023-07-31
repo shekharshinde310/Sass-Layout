@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%; // 1 rem = 10px
+
+    @include reponse(tabLand){
+        font-size: 56%;
+        border: 5px solid blue;
+    }
+    
+    @include reponse(tabPort){
+        font-size: 52%;
+        border: 5px solid blueviolet;
+    }
+
+    @include reponse(phone){
+        font-size: 50%;
+        border: 5px solid red;
+    }
+
+
+}
+
+body{
+    font-weight: 400;
+    line-height: 1.7;
+    padding: 3rem;
+    font-family: 'Lato', sans-serif;
+    color:$color-grey-dark;
+    font-size: 1.6rem;
+} 

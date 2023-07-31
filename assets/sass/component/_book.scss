@@ -1,0 +1,26 @@
+.book {
+    background-image: linear-gradient(107deg, rgba($color-white, 0.9)0%, rgba($color-white, 0.9)50%, transparent 40%),
+        url(../../../assets/images/nat-10.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.2);
+
+    // height: 500px;
+    &-form {
+        padding: 6rem 4rem;
+    }
+
+    @include reponse(phone){
+        background-image: linear-gradient(107deg, rgba($color-white, 0.75)0%, rgba($color-white, 0.75)50%),
+        url(../../../assets/images/nat-10.jpg);
+        .col-6{
+            flex: 0 0 100%;
+        }
+
+        &-from{
+            padding: 6rem -4rem;
+        }
+    }
+}

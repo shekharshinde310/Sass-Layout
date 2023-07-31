@@ -1,0 +1,41 @@
+@mixin lg($direction, $colors...) {
+    background-image: linear-gradient($direction, $colors);
+
+}
+
+@mixin backgroundClip {
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@mixin atCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin reponse($breakpoint) {
+    @if $breakpoint == phone{
+        @media (max-width:600px) {
+            @content;
+        }
+    }
+    @if $breakpoint == tabPort {
+        @media (max-width:900px) {
+            @content;
+        }
+    }
+    @if $breakpoint == tabLand {
+        @media (max-width:1200px) {
+            @content;
+        }
+    }
+    @if $breakpoint == bigScreens {
+        @media (min-width:1800px) {
+            @content;
+        }
+    }
+    
+}
